@@ -1,35 +1,32 @@
 import { Component, OnDestroy } from '@angular/core';
-import { UserService } from './services/user.service';
-import { take } from 'rxjs/operators/';
 import { Subscription } from 'rxjs';
 
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `<router-outlet></router-outlet>`
 })
 export class AppComponent implements OnDestroy {
   title = 'frontend';
   subscriptions: Array<Subscription> = [];
 
-  constructor(
-    // importing the UserService class from user.service.ts
-    private userService: UserService
-  ) {
+  // constructor(
+  //   // importing the UserService class from user.service.ts
+  //   private userService: UserService
+  // ) {
 
-    // FOR TESTING API ENDPOINT
+  //   // FOR TESTING API ENDPOINT
 
-    // push our new subscription to our array of subscriptions
-    this.subscriptions.push(
-      this.userService.test().subscribe({
-        // we have two different callbacks depending on success or failure 
-        next: (res) => { console.log(res) },
-        error: (error) => { console.log(error) },
-      })
-    );
+  //   // push our new subscription to our array of subscriptions
+  //   this.subscriptions.push(
+  //     this.userService.test().subscribe({
+  //       // we have two different callbacks depending on success or failure 
+  //       next: (res) => { console.log(res) },
+  //       error: (error) => { console.log(error) },
+  //     })
+  //   );
 
-  }
+  // }
 
   ngOnDestroy(): void {
     // called whenever component will be garbage collected
