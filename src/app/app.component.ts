@@ -1,19 +1,22 @@
-import { Component, OnDestroy } from '@angular/core';
-import { UserService } from './services/user.service';
+import { Component } from '@angular/core';
+/*import { UserService } from './services/user.service';
 import { take } from 'rxjs/operators/';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';*/
 
 
 @Component({
+  //moduleId: module.id,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent {
   title = 'frontend';
-  subscriptions: Array<Subscription> = [];
+  name = 'Ninja';
+}
+//subscriptions: Array<Subscription> = [];*/
 
-  constructor(
+  /*constructor(
     // importing the UserService class from user.service.ts
     private userService: UserService
   ) {
@@ -36,5 +39,4 @@ export class AppComponent implements OnDestroy {
     this.subscriptions.forEach((sub) => {
       sub.unsubscribe(); // Close all memory leaks
     })
-  }
-}
+  }*/
