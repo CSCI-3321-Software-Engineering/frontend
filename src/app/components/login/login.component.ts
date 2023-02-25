@@ -1,15 +1,16 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
   selector: 'app-login',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
   private message: string = "";
-  constructor (
+  constructor(
     private loginService: LoginService
   ) { }
 
@@ -23,7 +24,7 @@ export class LoginComponent {
         // no need to use JSON.parse
         console.log(data.msg);
       },
-      error: (error) => {console.log(error) }
+      error: (error) => { console.log(error) }
     })
   }
 }
