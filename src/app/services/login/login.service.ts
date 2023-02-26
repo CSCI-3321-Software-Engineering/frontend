@@ -12,8 +12,10 @@ export class LoginService {
     private http: HttpClient
   ) { }
 
-  validateLogin(): Observable<any> {
-    return this.http.get(`${environment.serverUrl}/api`)
+  validateLogin(username: String, password: String): Observable<any> {
+    return this.http.post<any>(`${environment.serverUrl}/login`,
+      { user: username, pass: password }
+    )
   }
 
 }

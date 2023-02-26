@@ -2,6 +2,7 @@ import { Component, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LoginService } from 'src/app/services/login/login.service';
 
+
 @Component({
   selector: 'app-login',
   encapsulation: ViewEncapsulation.None,
@@ -14,15 +15,20 @@ export class LoginComponent {
     private loginService: LoginService
   ) { }
 
-  checkLogin() {
-    this.loginService.validateLogin().subscribe({
-      next: (data) => {
-        // const obj = JSON.parse(data as string);
-        // this.message = obj.msg;
+  checkLogin(data: any) {
+    const username = data.username;
+    const password = data.password;
 
-        // already parses "data" as JSON object ^^^
-        // no need to use JSON.parse
-        console.log(data.msg);
+    this.loginService.validateLogin(username, password).subscribe({
+      next: (data) => {
+        // data contains a boolean in json that tells if user/password combo is correct
+        if (data.result == true) {
+          // eventually need to port over to student landing here
+          console.log("correct username and password");
+        } else {
+          // need to display error message here
+          console.log("incorrect username and password");
+        }
       },
       error: (error) => { console.log(error) }
     })
