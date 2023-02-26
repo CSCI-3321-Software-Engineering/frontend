@@ -1,10 +1,18 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 
 @Component({
   selector: 'app-root',
-  template: `<router-outlet></router-outlet>`
+  template: `<router-outlet></router-outlet>`,
+  styles: [`
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  `],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnDestroy {
   title = 'frontend';
