@@ -18,18 +18,18 @@
 
     <div class=login-box>
         <div class="login" style="color: rgb(0, 0, 0)">
-            <form id="login" method="get" action="login.php">
-                <label class="text-font"><b>Username
+            <form id="login" #userlogin = "ngForm" (ngSubmit) = "checkLogin(userlogin.value)">
+                <label style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>Username
                     </b>
                 </label>
-                <input type="text" name="Uname" id="Uname" placeholder="Username">
+                <input type="text" name="username" id="Uname" placeholder="Username" ngModel>
                 <br><br>
                 <label class="text-font"><b>Password
                     </b>
                 </label>
-                <input type="Password" name="Pass" id="Pass" placeholder="Password">
+                <input type="Password" name="password" id="Pass" placeholder="Password" ngModel>
                 <br><br>
-                <input type="button" name="log" id="log" value="Log In Here">
+                <input type="submit" name="log" id="log" value="Log In Here">
                 <br><br>
             </form>
         </div>
