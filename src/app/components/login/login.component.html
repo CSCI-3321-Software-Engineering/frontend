@@ -7,21 +7,16 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<div class="container">
-    <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 60px;">
+<nav>
+    <!-- <app-header></app-header> -->
+</nav>
+
+<section>
+    <h1 class="text-font" style="font-size: 60px;">
         TigerPAWS
     </h1>
 
-    <div style="background: ghostwhite; 
-            font-size: 25px; 
-            padding: 10px; 
-            border: 1px solid lightgray; 
-            margin-top: 0px;
-            margin-right: 35%;
-            margin-left: 35%;
-            margin-top: 50px;
-            opacity: 0.8;">
-
+    <div class=login-box>
         <div class="login" style="color: rgb(0, 0, 0)">
             <form id="login" #userlogin = "ngForm" (ngSubmit) = "checkLogin(userlogin.value)">
                 <label style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>Username
@@ -29,7 +24,7 @@
                 </label>
                 <input type="text" name="username" id="Uname" placeholder="Username" ngModel>
                 <br><br>
-                <label style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>Password
+                <label class="text-font"><b>Password
                     </b>
                 </label>
                 <input type="Password" name="password" id="Pass" placeholder="Password" ngModel>
@@ -39,18 +34,9 @@
             </form>
         </div>
     </div>
-</div>
 
+</section>
 
-<app-footer></app-footer>
-
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>
+<footer>
+    <app-footer></app-footer>
+</footer>
