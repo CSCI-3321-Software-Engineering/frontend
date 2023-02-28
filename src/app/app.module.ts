@@ -9,7 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
-import { CalenderComponent } from './calender/calender.component';
+import { CalenderComponent } from './components/calender/calender.component';
+import { MenubarComponent } from './components/menubar/menubar.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CalenderComponent } from './calender/calender.component';
     LoginComponent,
     FooterComponent,
     HeaderComponent,
-    CalenderComponent
+    CalenderComponent,
+    MenubarComponent
   ],
   imports: [
     BrowserModule,
