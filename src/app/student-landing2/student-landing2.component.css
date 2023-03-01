@@ -1,0 +1,32 @@
+footer{
+    text-align: center;
+    height:5vh;
+    /*Or fixed pixel unit*/
+}
+
+section {
+    text-align: center;
+    height: calc(90vh);
+    /* - Height: calc(100vh - (navheight + footer))
+       - Over flow y make the dive scrollable 
+    when it exceed the fixed height*/
+    overflow-y: auto;
+    transition: all 0.5s;
+    background: url('./Bgnd.jpg')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+/* .calendar-box {
+    background: ghostwhite; 
+    font-size: 25px; 
+    padding: 10px; 
+    border: 1px solid lightgray; 
+    margin-top: 0px;
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 50px;
+    opacity: 0.8; 
+} */
