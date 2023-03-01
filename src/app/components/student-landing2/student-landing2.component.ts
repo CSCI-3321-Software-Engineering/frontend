@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-landing2.component.css']
 })
 export class StudentLanding2Component {
-
+  constructor() {}
+  ngOnInit() {}
 }

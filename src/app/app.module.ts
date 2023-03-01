@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
-import { StudentLanding2Component } from './student-landing2/student-landing2.component';
+import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 
 
 @NgModule({
