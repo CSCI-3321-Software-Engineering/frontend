@@ -12,7 +12,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { ProfessorLandingComponent } from './components/professor-landing/professor-landing.component';
-import { ProfessorUserComponent } from './professor-user/professor-user.component';
+import { ProfessorUserComponent } from './components/professor-user/professor-user.component';
+import { ProfessorMyCoursesComponent } from './components/professor-my-courses/professor-my-courses.component';
+import { ProfessorEditCoursesComponent } from './components/professor-edit-courses/professor-edit-courses.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { ProfessorUserComponent } from './professor-user/professor-user.componen
     CalenderComponent,
     MenubarComponent,
     ProfessorLandingComponent,
-    ProfessorUserComponent
+    ProfessorUserComponent,
+    ProfessorMyCoursesComponent,
+    ProfessorEditCoursesComponent
   ],
   imports: [
     BrowserModule,
