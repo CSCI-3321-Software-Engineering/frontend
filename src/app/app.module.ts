@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
+import { ProfessorLandingComponent } from './components/professor-landing/professor-landing.component';
+import { ProfessorUserComponent } from './professor-user/professor-user.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { MenubarComponent } from './components/menubar/menubar.component';
     FooterComponent,
     HeaderComponent,
     CalenderComponent,
-    MenubarComponent
+    MenubarComponent,
+    ProfessorLandingComponent,
+    ProfessorUserComponent
   ],
   imports: [
     BrowserModule,
