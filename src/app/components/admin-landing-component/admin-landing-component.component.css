@@ -1,0 +1,20 @@
+nav {
+    height: 5vh;
+    /*Or fixed pixel unit*/
+}
+
+footer {
+    text-align: center;
+    height: 5vh;
+    /*Or fixed pixel unit*/
+}
+
+section {
+    text-align: center;
+    height: calc(90vh);
+    /* - Height: calc(100vh - (navheight + footer))
+       - Over flow y make the dive scrollable 
+    when it exceed the fixed height*/
+    overflow-y: auto;
+    transition: all 0.5s;
+}

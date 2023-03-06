@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
-import { AdminLandingComponentComponent } from './components/admin-landing-component/admin-landing-component.component';
+import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import { AdminLandingComponentComponent } from './components/admin-landing-compo
     HeaderComponent,
     CalenderComponent,
     MenubarComponent,
-    AdminLandingComponentComponent
+    AdminLandingComponent
   ],
   imports: [
     BrowserModule,
