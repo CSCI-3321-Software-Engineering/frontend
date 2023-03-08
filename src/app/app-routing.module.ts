@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
+import { ProfessorCourseCheckoutComponent } from './components/professor-course-checkout/professor-course-checkout.component';
+import { ProfessorCourseRegisterComponent } from './components/professor-course-register/professor-course-register.component';
 import { ProfessorEditCoursesComponent } from './components/professor-edit-courses/professor-edit-courses.component';
 import { ProfessorLandingComponent } from './components/professor-landing/professor-landing.component';
 import { ProfessorMyCoursesComponent } from './components/professor-my-courses/professor-my-courses.component';
@@ -27,6 +29,14 @@ const routes: Routes = [
   {
     path: 'professor-edit-courses',
     component: ProfessorEditCoursesComponent
+  },
+  {
+    path: 'professor-course-register',
+    component: ProfessorCourseRegisterComponent
+  },
+  {
+    path: 'professor-course-checkout',
+    component: ProfessorCourseCheckoutComponent
   }
 ];
 
