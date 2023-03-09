@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
+import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
 import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 
 
@@ -22,6 +23,7 @@ import { StudentLanding2Component } from './components/student-landing2/student-
     HeaderComponent,
     CalenderComponent,
     MenubarComponent,
+    AdminLandingComponent,
     StudentLanding2Component
   ],
   imports: [
