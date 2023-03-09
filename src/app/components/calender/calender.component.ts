@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./calender.component.scss']
 })
 export class CalenderComponent {
-
+  constructor() {}
+  ngOnInit() {}
 }

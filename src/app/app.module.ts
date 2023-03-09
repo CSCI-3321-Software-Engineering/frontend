@@ -17,6 +17,8 @@ import { ProfessorMyCoursesComponent } from './components/professor-my-courses/p
 import { ProfessorEditCoursesComponent } from './components/professor-edit-courses/professor-edit-courses.component';
 import { ProfessorCourseRegisterComponent } from './components/professor-course-register/professor-course-register.component';
 import { ProfessorCourseCheckoutComponent } from './components/professor-course-checkout/professor-course-checkout.component';
+import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
+import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { ProfessorCourseCheckoutComponent } from './components/professor-course-
     ProfessorMyCoursesComponent,
     ProfessorEditCoursesComponent,
     ProfessorCourseRegisterComponent,
-    ProfessorCourseCheckoutComponent
+    ProfessorCourseCheckoutComponent,
+    AdminLandingComponent,
+    StudentLanding2Component
   ],
   imports: [
     BrowserModule,
