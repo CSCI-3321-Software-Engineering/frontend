@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
+import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AdminLandingComponent } from './components/admin-landing-component/admi
     HeaderComponent,
     CalenderComponent,
     MenubarComponent,
-    AdminLandingComponent
+    AdminLandingComponent,
+    StudentLanding2Component
   ],
   imports: [
     BrowserModule,

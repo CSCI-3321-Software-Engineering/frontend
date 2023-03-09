@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
 import { LoginComponent } from './components/login/login.component';
+import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminLandingComponent
+  },
+  {
+    path: 'student',
+    component: StudentLanding2Component
   }
 ];
 
