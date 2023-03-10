@@ -18,29 +18,27 @@ const routes: Routes = [
   },
   {
     path: 'professor',
-    component: ProfessorLandingComponent,
-    children: [
-      {
-        path: 'user',
-        component: ProfessorUserComponent
-      },
-      {
-        path: 'courses',
-        component: ProfessorMyCoursesComponent
-      },
-      {
-        path: 'edit',
-        component: ProfessorEditCoursesComponent
-      },
-      {
-        path: 'register',
-        component: ProfessorCourseRegisterComponent
-      },
-      {
-        path: 'checkout',
-        component: ProfessorCourseCheckoutComponent
-      },
-    ]
+    component: ProfessorLandingComponent
+  },
+  {
+    path: 'professor/user',
+    component: ProfessorUserComponent
+  },
+  {
+    path: 'professor/courses',
+    component: ProfessorMyCoursesComponent
+  },
+  {
+    path: 'professor/edit',
+    component: ProfessorEditCoursesComponent
+  },
+  {
+    path: 'professor/register',
+    component: ProfessorCourseRegisterComponent
+  },
+  {
+    path: 'professor/checkout',
+    component: ProfessorCourseCheckoutComponent
   },
   {
     path: 'admin',
