@@ -1,6 +1,6 @@
 <ul>
-    <li><a class="active" href="#home">HOME</a></li>
-    <li><a href="#search">COURSE SEARCH</a></li>
-    <li><a href="#courses">MY COURSES</a></li>
-    <li><a href="#profile">USER PROFILE</a></li>
+    <li><a class="active" (click)="homeRedirect()">HOME</a></li>
+    <li><a (click)="courseEditRedirect()">MANAGE COURSE</a></li>
+    <li><a (click)="courseListRedirect()">MY COURSES</a></li>
+    <li><a (click)="userRedirect()">USER PROFILE</a></li>
 </ul>

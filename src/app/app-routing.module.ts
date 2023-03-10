@@ -17,27 +17,27 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'professor-landing',
+    path: 'professor',
     component: ProfessorLandingComponent
   },
   {
-    path: 'professor-user',
+    path: 'professor/user',
     component: ProfessorUserComponent
   },
   {
-    path: 'professor-my-courses',
+    path: 'professor/courses',
     component: ProfessorMyCoursesComponent
   },
   {
-    path: 'professor-edit-courses',
+    path: 'professor/edit',
     component: ProfessorEditCoursesComponent
   },
   {
-    path: 'professor-course-register',
+    path: 'professor/register',
     component: ProfessorCourseRegisterComponent
   },
   {
-    path: 'professor-course-checkout',
+    path: 'professor/checkout',
     component: ProfessorCourseCheckoutComponent
   },
   {
