@@ -13,7 +13,7 @@ export class MenubarComponent {
   private base_route = this.router.url.split('/')[1]; 
 
   homeRedirect() {
-    this.router.navigate(['']);
+    this.router.navigate([`${this.base_route}`]);
   }
 
   courseEditRedirect() {
