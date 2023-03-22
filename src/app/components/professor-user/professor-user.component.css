@@ -11,7 +11,7 @@ section {
     when it exceed the fixed height*/
     overflow-y: auto;
     transition: all 0.5s;
-    /* background: url('./Bgnd.jpg')no-repeat center center fixed; */
+    background: url('./Bgnd6.jpg')no-repeat center center fixed; 
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
