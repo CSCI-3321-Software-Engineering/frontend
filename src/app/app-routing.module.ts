@@ -9,7 +9,10 @@ import { ProfessorEditCoursesComponent } from './components/professor-edit-cours
 import { ProfessorLandingComponent } from './components/professor-landing/professor-landing.component';
 import { ProfessorMyCoursesComponent } from './components/professor-my-courses/professor-my-courses.component';
 import { ProfessorUserComponent } from './components/professor-user/professor-user.component';
+import { StudentCourseSearchComponent } from './components/student-course-search/student-course-search.component';
 import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
+import { StudentMyCoursesComponent } from './components/student-my-courses/student-my-courses.component';
+import { StudentUserComponent } from './components/student-user/student-user.component';
 
 const routes: Routes = [
   {
@@ -47,6 +50,18 @@ const routes: Routes = [
   {
     path: 'student',
     component: StudentLanding2Component
+  },
+  {
+    path: 'student/user',
+    component: StudentUserComponent
+  },
+  {
+    path: 'student/search',
+    component: StudentCourseSearchComponent
+  },
+  {
+    path: 'student/student-courses',
+    component: StudentMyCoursesComponent
   }
 ];
 
