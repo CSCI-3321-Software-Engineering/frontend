@@ -11,8 +11,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
-import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
+import { AdminLandingComponent } from './components/admin-landing/admin-landing.component';
 import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
+import { AdminMenubarComponent } from './components/admin-menubar/admin-menubar.component';
+import { AdminUserComponent } from './components/admin-user/admin-user.component';
+import { AdminCoursesComponent } from './components/admin-courses/admin-courses.component';
+import { AdminProfessorsComponent } from './components/admin-professors/admin-professors.component';
 
 
 @NgModule({
@@ -24,7 +28,11 @@ import { StudentLanding2Component } from './components/student-landing2/student-
     CalenderComponent,
     MenubarComponent,
     AdminLandingComponent,
-    StudentLanding2Component
+    StudentLanding2Component,
+    AdminMenubarComponent,
+    AdminUserComponent,
+    AdminCoursesComponent,
+    AdminProfessorsComponent
   ],
   imports: [
     BrowserModule,
