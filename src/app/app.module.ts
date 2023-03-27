@@ -19,6 +19,7 @@ import { ProfessorCourseRegisterComponent } from './components/professor-course-
 import { ProfessorCourseCheckoutComponent } from './components/professor-course-checkout/professor-course-checkout.component';
 import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
 import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { StudentLanding2Component } from './components/student-landing2/student-
     ProfessorCourseRegisterComponent,
     ProfessorCourseCheckoutComponent,
     AdminLandingComponent,
-    StudentLanding2Component
+    StudentLanding2Component,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
