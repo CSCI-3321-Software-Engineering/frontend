@@ -6,12 +6,42 @@ import { AdminLandingComponent } from './components/admin-landing/admin-landing.
 import { AdminProfessorsComponent } from './components/admin-professors/admin-professors.component';
 import { AdminUserComponent } from './components/admin-user/admin-user.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProfessorCourseCheckoutComponent } from './components/professor-course-checkout/professor-course-checkout.component';
+import { ProfessorCourseRegisterComponent } from './components/professor-course-register/professor-course-register.component';
+import { ProfessorEditCoursesComponent } from './components/professor-edit-courses/professor-edit-courses.component';
+import { ProfessorLandingComponent } from './components/professor-landing/professor-landing.component';
+import { ProfessorMyCoursesComponent } from './components/professor-my-courses/professor-my-courses.component';
+import { ProfessorUserComponent } from './components/professor-user/professor-user.component';
 import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent
+  },
+  {
+    path: 'professor',
+    component: ProfessorLandingComponent
+  },
+  {
+    path: 'professor/user',
+    component: ProfessorUserComponent
+  },
+  {
+    path: 'professor/courses',
+    component: ProfessorMyCoursesComponent
+  },
+  {
+    path: 'professor/edit',
+    component: ProfessorEditCoursesComponent
+  },
+  {
+    path: 'professor/register',
+    component: ProfessorCourseRegisterComponent
+  },
+  {
+    path: 'professor/checkout',
+    component: ProfessorCourseCheckoutComponent
   },
   {
     path: 'admin',

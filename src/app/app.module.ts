@@ -17,6 +17,13 @@ import { AdminMenubarComponent } from './components/admin-menubar/admin-menubar.
 import { AdminUserComponent } from './components/admin-user/admin-user.component';
 import { AdminCoursesComponent } from './components/admin-courses/admin-courses.component';
 import { AdminProfessorsComponent } from './components/admin-professors/admin-professors.component';
+import { ProfessorLandingComponent } from './components/professor-landing/professor-landing.component';
+import { ProfessorUserComponent } from './components/professor-user/professor-user.component';
+import { ProfessorMyCoursesComponent } from './components/professor-my-courses/professor-my-courses.component';
+import { ProfessorEditCoursesComponent } from './components/professor-edit-courses/professor-edit-courses.component';
+import { ProfessorCourseRegisterComponent } from './components/professor-course-register/professor-course-register.component';
+import { ProfessorCourseCheckoutComponent } from './components/professor-course-checkout/professor-course-checkout.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -27,12 +34,19 @@ import { AdminProfessorsComponent } from './components/admin-professors/admin-pr
     HeaderComponent,
     CalenderComponent,
     MenubarComponent,
+    ProfessorLandingComponent,
+    ProfessorUserComponent,
+    ProfessorMyCoursesComponent,
+    ProfessorEditCoursesComponent,
+    ProfessorCourseRegisterComponent,
+    ProfessorCourseCheckoutComponent,
     AdminLandingComponent,
     StudentLanding2Component,
     AdminMenubarComponent,
     AdminUserComponent,
     AdminCoursesComponent,
-    AdminProfessorsComponent
+    AdminProfessorsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
