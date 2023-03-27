@@ -11,14 +11,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
+import { AdminLandingComponent } from './components/admin-landing/admin-landing.component';
+import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
+import { AdminMenubarComponent } from './components/admin-menubar/admin-menubar.component';
+import { AdminUserComponent } from './components/admin-user/admin-user.component';
+import { AdminCoursesComponent } from './components/admin-courses/admin-courses.component';
+import { AdminProfessorsComponent } from './components/admin-professors/admin-professors.component';
 import { ProfessorLandingComponent } from './components/professor-landing/professor-landing.component';
 import { ProfessorUserComponent } from './components/professor-user/professor-user.component';
 import { ProfessorMyCoursesComponent } from './components/professor-my-courses/professor-my-courses.component';
 import { ProfessorEditCoursesComponent } from './components/professor-edit-courses/professor-edit-courses.component';
 import { ProfessorCourseRegisterComponent } from './components/professor-course-register/professor-course-register.component';
 import { ProfessorCourseCheckoutComponent } from './components/professor-course-checkout/professor-course-checkout.component';
-import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
-import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 
@@ -38,6 +42,10 @@ import { ProfileComponent } from './components/profile/profile.component';
     ProfessorCourseCheckoutComponent,
     AdminLandingComponent,
     StudentLanding2Component,
+    AdminMenubarComponent,
+    AdminUserComponent,
+    AdminCoursesComponent,
+    AdminProfessorsComponent,
     ProfileComponent
   ],
   imports: [
