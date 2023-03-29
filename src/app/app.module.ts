@@ -27,6 +27,7 @@ import { StudentUserComponent } from './components/student-user/student-user.com
 import { StudentMyCoursesComponent } from './components/student-my-courses/student-my-courses.component';
 import { StudentCourseSearchComponent } from './components/student-course-search/student-course-search.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     AdminUserComponent,
     AdminCoursesComponent,
     AdminProfessorsComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdvancedSearchComponent
   ],
   imports: [
     BrowserModule,
