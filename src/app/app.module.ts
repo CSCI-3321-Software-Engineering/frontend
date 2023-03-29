@@ -23,11 +23,6 @@ import { ProfessorMyCoursesComponent } from './components/professor-my-courses/p
 import { ProfessorEditCoursesComponent } from './components/professor-edit-courses/professor-edit-courses.component';
 import { ProfessorCourseRegisterComponent } from './components/professor-course-register/professor-course-register.component';
 import { ProfessorCourseCheckoutComponent } from './components/professor-course-checkout/professor-course-checkout.component';
-import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
-import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
-import { StudentUserComponent } from './components/student-user/student-user.component';
-import { StudentMyCoursesComponent } from './components/student-my-courses/student-my-courses.component';
-import { StudentCourseSearchComponent } from './components/student-course-search/student-course-search.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 
@@ -47,9 +42,6 @@ import { ProfileComponent } from './components/profile/profile.component';
     ProfessorCourseCheckoutComponent,
     AdminLandingComponent,
     StudentLanding2Component,
-    StudentUserComponent,
-    StudentMyCoursesComponent,
-    StudentCourseSearchComponent
     AdminMenubarComponent,
     AdminUserComponent,
     AdminCoursesComponent,
