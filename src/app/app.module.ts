@@ -11,6 +11,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
+import { AdminLandingComponent } from './components/admin-landing/admin-landing.component';
+import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
+import { AdminMenubarComponent } from './components/admin-menubar/admin-menubar.component';
+import { AdminUserComponent } from './components/admin-user/admin-user.component';
+import { AdminCoursesComponent } from './components/admin-courses/admin-courses.component';
+import { AdminProfessorsComponent } from './components/admin-professors/admin-professors.component';
 import { ProfessorLandingComponent } from './components/professor-landing/professor-landing.component';
 import { ProfessorUserComponent } from './components/professor-user/professor-user.component';
 import { ProfessorMyCoursesComponent } from './components/professor-my-courses/professor-my-courses.component';
@@ -22,6 +28,7 @@ import { StudentLanding2Component } from './components/student-landing2/student-
 import { StudentUserComponent } from './components/student-user/student-user.component';
 import { StudentMyCoursesComponent } from './components/student-my-courses/student-my-courses.component';
 import { StudentCourseSearchComponent } from './components/student-course-search/student-course-search.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -43,6 +50,11 @@ import { StudentCourseSearchComponent } from './components/student-course-search
     StudentUserComponent,
     StudentMyCoursesComponent,
     StudentCourseSearchComponent
+    AdminMenubarComponent,
+    AdminUserComponent,
+    AdminCoursesComponent,
+    AdminProfessorsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
