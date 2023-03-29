@@ -12,7 +12,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { AdminLandingComponent } from './components/admin-landing/admin-landing.component';
-import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 import { AdminMenubarComponent } from './components/admin-menubar/admin-menubar.component';
 import { AdminUserComponent } from './components/admin-user/admin-user.component';
 import { AdminCoursesComponent } from './components/admin-courses/admin-courses.component';
@@ -23,7 +22,6 @@ import { ProfessorMyCoursesComponent } from './components/professor-my-courses/p
 import { ProfessorEditCoursesComponent } from './components/professor-edit-courses/professor-edit-courses.component';
 import { ProfessorCourseRegisterComponent } from './components/professor-course-register/professor-course-register.component';
 import { ProfessorCourseCheckoutComponent } from './components/professor-course-checkout/professor-course-checkout.component';
-import { AdminLandingComponent } from './components/admin-landing-component/admin-landing-component.component';
 import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 import { StudentUserComponent } from './components/student-user/student-user.component';
 import { StudentMyCoursesComponent } from './components/student-my-courses/student-my-courses.component';
@@ -49,7 +47,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     StudentLanding2Component,
     StudentUserComponent,
     StudentMyCoursesComponent,
-    StudentCourseSearchComponent
+    StudentCourseSearchComponent,
     AdminMenubarComponent,
     AdminUserComponent,
     AdminCoursesComponent,
