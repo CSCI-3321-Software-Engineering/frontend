@@ -1,7 +1,8 @@
-import { Component, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription, take } from 'rxjs';
 import { LoginService } from 'src/app/services/login/login.service';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -9,12 +10,13 @@ import { LoginService } from 'src/app/services/login/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
     private route: ActivatedRoute, 
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService,
   ) { }
 
   checkLogin(data: any) {
@@ -27,6 +29,14 @@ export class LoginComponent {
           // data contains a boolean in json that tells if user/password combo is correct
           if (data.valid) {
             console.log("login was valid");
+            this.loginService.isloggedin = true;
+
+            this.cookieService.set('username', username);
+            this.cookieService.set('password', password);
+            console.log(this.cookieService.get('username'));
+            console.log(this.cookieService.get('password'));
+
+
             // eventually need to port over to student landing here
             switch (username) {
               case "student": {
@@ -42,6 +52,8 @@ export class LoginComponent {
                 break;
               }
             }
+
+            
           } else {
             // need to display error message here
             console.log("incorrect username and password");
@@ -50,4 +62,7 @@ export class LoginComponent {
       error: (error) => { console.log(error) }
     })
   }
+
+  ngOnInit(): void {}
+
 }
