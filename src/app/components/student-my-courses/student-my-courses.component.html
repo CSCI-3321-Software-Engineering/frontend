@@ -27,31 +27,23 @@
             <div>test3</div>
             <div>test4</div>
         </div>
-        <h1>Add Courses</h1>
+        <h1>Add Courses </h1>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
                 <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                    <th>Header 3</th>
+                    <th>Favorited Courses</th>
+                    <th>Time</th>
+                    <th>Select Course</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Content 1</td>
-                    <td>Content 1</td>
-                    <td>Content 1</td>
-                </tr>
-                <tr>
-                    <td>Content 2</td>
-                    <td>Content 2</td>
-                    <td>Content 2</td>
-                </tr>
-                <tr>
-                    <td>Content 3</td>
-                    <td>Content 3</td>
-                    <td>Content 3</td>
+                <tr *ngFor="let course of myCourses">
+                    <td>{{course[0]}}</td>
+                    <td>{{course[1]}}</td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <input type="checkbox">
+                    </td>
                 </tr>
                 <tbody>
             </table>

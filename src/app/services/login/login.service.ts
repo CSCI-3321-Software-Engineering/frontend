@@ -11,6 +11,8 @@ import { CookieService } from 'ngx-cookie-service/public-api';
 export class LoginService {
 
   isloggedin: boolean = false;
+  username: String;
+  password: String;
 
   constructor(
     private http: HttpClient
