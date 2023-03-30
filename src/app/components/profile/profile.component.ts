@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { take } from 'rxjs';
 import { DatabaseService } from 'src/app/services/database/database.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-profile',
@@ -12,27 +14,22 @@ export class ProfileComponent {
   public password: String;
   public id: String;
   constructor(
-    private databaseConn: DatabaseService
+    private databaseConn: DatabaseService,
+    private cookieService: CookieService
   ) { 
     const obj = this.getUserInfo();
-    this.username = obj.username;
-    this.email = obj.email;
-    this.password = obj.password;
-    this.id = obj.id;
   }
 
   getUserInfo() { 
 
-
-
-    // placeholder until we get endpoint up to date
-    return {
-      username: "apple",
-      email: "banana",
-      password: "strawberry",
-      id: "rasberry"
-    }
-
+    // API endpoint not functioning yet
+    this.databaseConn.getUserInfo(this.cookieService.get('username')).pipe(take(1)).subscribe({
+      next: (data) => {
+        this.username = data.username;
+        this.email = data.email;
+        this.password = data.password;
+        this.id = data.id;
+      }
+    })
   } 
-
 }

@@ -17,4 +17,11 @@ export class DatabaseService {
       user: username
     })
   }
+
+  getUserInfo(username: String): Observable<any> {
+    // should return a json object with all information about the user
+    return this.http.post<any>(`${environment.serverUrl}/userInfo`, {
+      user: username
+    });
+  }
 }
