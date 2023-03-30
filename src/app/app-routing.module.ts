@@ -77,6 +77,10 @@ const routes: Routes = [
   {
     path: 'student/student-courses',
     component: StudentMyCoursesComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];
 
