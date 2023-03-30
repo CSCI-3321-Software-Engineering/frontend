@@ -15,5 +15,12 @@
         </div>
         <app-admin-menubar />
     </div>
+    <div id="rectangle">
+        <ul id="loglist">
+            <li *ngFor="let log of logs">
+                {{log}}
+            </li>
+        </ul>
+    </div>
     <app-footer></app-footer>
 </section>

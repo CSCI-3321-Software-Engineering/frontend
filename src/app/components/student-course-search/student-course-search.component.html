@@ -1,14 +1,20 @@
 <nav>
     <app-header></app-header>
-</nav>
-
+</nav> 
 <section class = "hero is-primary is-bold is-fullheight">
     <div class = "hero-body">
         <div class = "container has text-centered">
             <h1 class="text-font" style="font-size: 60px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
                 TigerPAWS
             </h1>
-            <app-menubar></app-menubar>
+            
+            <ul>
+                <li><a class = "active" href = "student"> HOME </a></li>
+                <li><a href = "student/search"> COURSE SEARCH </a></li>
+                <li><a href = "student/student-courses"> MY COURSES </a></li>
+                <li><a href = "student/user"> USER PROFILE </a></li>
+            </ul>    
+             
         </div>
         <div class="s009">
             <form>
@@ -151,6 +157,9 @@
             });
         
           </script>
+        
+        
+        
     </div>
     <app-footer></app-footer>
 </section>
