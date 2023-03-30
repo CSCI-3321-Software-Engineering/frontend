@@ -22,10 +22,9 @@
 
         <h1>Edit Schedule</h1>
         <div class="box">
-            <div>test1</div>
-            <div>test2</div>
-            <div>test3</div>
-            <div>test4</div>
+            <div *ngFor="let course of myCourses">
+                {{course}}
+            </div>
         </div>
         <h1>Add Courses </h1>
         <div class="table-wrapper">
@@ -38,7 +37,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let course of myCourses">
+                <tr *ngFor="let course of myRegistrationCourses">
                     <td>{{course[0]}}</td>
                     <td>{{course[1]}}</td>
                     <td style="text-align: center; vertical-align: middle;">

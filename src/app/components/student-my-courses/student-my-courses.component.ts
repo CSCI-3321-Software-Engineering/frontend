@@ -10,6 +10,7 @@ import { take } from 'rxjs';
   styleUrls: ['./student-my-courses.component.css']
 })
 export class StudentMyCoursesComponent {
+  public myRegistrationCourses;
   public myCourses;
   public username;
   constructor(
@@ -17,13 +18,16 @@ export class StudentMyCoursesComponent {
     private cookieService: CookieService,
     private databaseConn: DatabaseService
   ) { 
-
-    this.myCourses = this.getCourses();
+    this.myCourses = this.getCourses()
+    this.myRegistrationCourses = this.getRegistrationCourses();
     this.username = this.cookieService.get('username');
   }
 
-
   getCourses() {
+    return ["test course 1", "test course 2", "test course 3"];
+  }
+
+  getRegistrationCourses() {
     console.log(this.username);
 
     // this.databaseConn.getCourses(username).pipe(take(1))
@@ -34,7 +38,7 @@ export class StudentMyCoursesComponent {
     //     error: (error) => { console.log(error) }
     //   })
 
-    return [[1,1],[2,2],[3,3]]
+    return [[1,1],[2,2],[3,3]];
   }
 
 }
