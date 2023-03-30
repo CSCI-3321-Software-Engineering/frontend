@@ -19,6 +19,36 @@
                 <li><a href = "student/user"> USER PROFILE </a></li>
             </ul>
         </div>
+
+        <h1>Edit Schedule</h1>
+        <div class="box">
+            <div *ngFor="let course of myCourses">
+                {{course}}
+            </div>
+        </div>
+        <h1>Add Courses </h1>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th>Favorited Courses</th>
+                    <th>Time</th>
+                    <th>Select Course</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let course of myRegistrationCourses">
+                    <td>{{course[0]}}</td>
+                    <td>{{course[1]}}</td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <input type="checkbox">
+                    </td>
+                </tr>
+                <tbody>
+            </table>
+        </div>
+
+
     </div>
     <app-footer></app-footer>
 </section>
