@@ -857,7 +857,7 @@ ul {
   }
   
   .s009 {
-    min-height: 100vh;
+    min-height: 50vh;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
