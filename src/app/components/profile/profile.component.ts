@@ -9,10 +9,10 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  public username: String;
-  public email: String;
-  public password: String;
-  public id: String;
+  public username: String = "backend not running";
+  public email: String = "backend not running";
+  public password: String = "backend not running";
+  public id: String = "backend not running";
   constructor(
     private databaseConn: DatabaseService,
     private cookieService: CookieService
