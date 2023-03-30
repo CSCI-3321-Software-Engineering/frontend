@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class StudentCourseSearchComponent {
   constructor() { }
-  ngOnInit() {}
+  ngOnInit() { }
+  courses = ["Course1", "Course2", "Course3", "Course4", "Course5", "Course6", "Course7", "Course8", "Course9", "Course10"]
 }
