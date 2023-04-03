@@ -12,15 +12,22 @@ export class DatabaseService {
     private http: HttpClient
   ) { }
 
-  getCourses(username: String): Observable<any> {
-    return this.http.post<any>(`${environment.serverUrl}/courses`, {
-      user: username
+  getCourses(username: String, registering: Boolean): Observable<any> {
+    return this.http.post<any>(`${environment.serverUrl}/api/getcourses`, {
+      user: username,
+      registration: registering
     })
+  }
+
+  getCourse(name: String): Observable<any> {
+    return this.http.post<any>(`${environment.serverUrl}/api/getcourse`, {
+      courseName: name
+    });
   }
 
   getUserInfo(username: String): Observable<any> {
     // should return a json object with all information about the user
-    return this.http.post<any>(`${environment.serverUrl}/userInfo`, {
+    return this.http.post<any>(`${environment.serverUrl}/api/userinfo`, {
       user: username
     });
   }

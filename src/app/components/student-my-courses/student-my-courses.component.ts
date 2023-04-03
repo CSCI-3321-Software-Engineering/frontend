@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Inject, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { LoginService } from 'src/app/services/login/login.service';
 import { CookieService } from 'ngx-cookie-service';
 import { DatabaseService } from 'src/app/services/database/database.service';
 import { take } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-student-my-courses',
@@ -10,35 +11,36 @@ import { take } from 'rxjs';
   styleUrls: ['./student-my-courses.component.css']
 })
 export class StudentMyCoursesComponent {
-  public myRegistrationCourses;
-  public myCourses;
+  public courseObjs: any[] = [];
+  public myCourses: any;
   public username;
+
   constructor(
     private loginService: LoginService,
     private cookieService: CookieService,
-    private databaseConn: DatabaseService
+    private databaseConn: DatabaseService,
+    @Inject(DOCUMENT) doc: Document
   ) { 
-    this.myCourses = this.getCourses()
-    this.myRegistrationCourses = this.getRegistrationCourses();
+
     this.username = this.cookieService.get('username');
-  }
+    
+    databaseConn.getCourses(this.username, true)
+      .pipe(take(1)).subscribe(res => {
+        const myRegistrationCourses = res.courses.split(" ");
 
-  getCourses() {
-    return ["test course 1", "test course 2", "test course 3"];
-  }
+        myRegistrationCourses.forEach((courseName: String) => {
+          databaseConn.getCourse(courseName).pipe(take(1))
+          .subscribe(res => {
+            this.courseObjs.push(res);
+          })
+        });
+      });
 
-  getRegistrationCourses() {
-    console.log(this.username);
+    databaseConn.getCourses(this.username, false)
+      .pipe(take(1)).subscribe(res => {
+        this.myCourses = res.courses.split(" ");
+    });
 
-    // this.databaseConn.getCourses(username).pipe(take(1))
-    //   .subscribe({
-    //     next: (data) => {
-    //       console.log(data);
-    //     },
-    //     error: (error) => { console.log(error) }
-    //   })
-
-    return [[1,1],[2,2],[3,3]];
   }
 
 }
