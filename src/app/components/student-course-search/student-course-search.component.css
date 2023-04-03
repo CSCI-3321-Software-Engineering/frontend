@@ -33,7 +33,8 @@ section {
 }
 
 #menubar li a {
-  font-family: 'Gill Sans', 'Gill Sans MT';
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
   display: block;
   color: black;
   text-align: center;
@@ -122,7 +123,9 @@ hr {
    * 2. Correct the odd `em` font sizing in all browsers.
    */
 pre {
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -177,7 +180,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: 400; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -268,7 +271,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: 400; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -905,7 +908,7 @@ legend {
     align-items: center;
     /*background: tra;*/
     padding: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: 400; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   .s009 form {
@@ -934,7 +937,9 @@ legend {
     border-radius: 3px;
     height: 70px;
     color: #555;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
   }
 
   .s009 form .inner-form .input-field input.placeholder {
@@ -1103,7 +1108,7 @@ legend {
   align-items: center;
   /*background: tra;*/
   padding: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: 400; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .s009 form {
@@ -1132,7 +1137,9 @@ legend {
   border-radius: 3px;
   height: 70px;
   color: #555;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
 }
 
 .s009 form .inner-form .input-field input.placeholder {
@@ -1458,7 +1465,7 @@ legend {
 #rectangle li {
   float: center;
   border: 1px solid black;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: 400; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: block;
   color: black;
   text-align: left;
