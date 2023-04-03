@@ -25,6 +25,7 @@ export class ProfileComponent {
     // API endpoint not functioning yet
     this.databaseConn.getUserInfo(this.cookieService.get('username')).pipe(take(1)).subscribe({
       next: (data) => {
+        console.log(data)
         this.username = data.username;
         this.email = data.email;
         this.password = data.password;

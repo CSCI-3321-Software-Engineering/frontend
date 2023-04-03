@@ -36,18 +36,18 @@ export class LoginComponent {
             console.log(this.cookieService.get('username'));
             console.log(this.cookieService.get('password'));
 
-
+            
             // eventually need to port over to student landing here
-            switch (username) {
-              case "student": {
+            switch (data.userType) {
+              case "s": {
                 this.router.navigate(['student']);
                 break;
               }
-              case "admin": {
+              case "a": {
                 this.router.navigate(['admin']);
                 break;
               }
-              case "professor": {
+              case "p": {
                 this.router.navigate(['professor']);
                 break;
               }

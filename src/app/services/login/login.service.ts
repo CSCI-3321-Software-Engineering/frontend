@@ -19,7 +19,7 @@ export class LoginService {
   ) { }
   
   validateLogin(username: String, password: String): Observable<any> {
-    return this.http.post<any>(`${environment.serverUrl}/login`,
+    return this.http.post<any>(`${environment.serverUrl}/api/login`,
       { user: username, pass: password }
     )
   }
