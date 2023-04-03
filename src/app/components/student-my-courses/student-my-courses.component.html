@@ -36,10 +36,10 @@
                     <th>Select Course</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr *ngFor="let course of myRegistrationCourses">
-                    <td>{{course[0]}}</td>
-                    <td>{{course[1]}}</td>
+                <tbody #registeringTable>
+                <tr #tableBodyRow *ngFor="let course of courseObjs">
+                    <td>{{course.title}}</td>
+                    <td>{{course.courseNumber}}</td>
                     <td style="text-align: center; vertical-align: middle;">
                         <input type="checkbox">
                     </td>
@@ -47,7 +47,6 @@
                 <tbody>
             </table>
         </div>
-
 
     </div>
     <app-footer></app-footer>
