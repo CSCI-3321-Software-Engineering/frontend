@@ -19,7 +19,7 @@ section {
 }
 .rectangle{
     width:1200px;
-    height:500px;
+    height:auto;
     opacity: 0.85;
     margin: 0 auto;
     position: relative;
