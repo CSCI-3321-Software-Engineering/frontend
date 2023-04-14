@@ -16,6 +16,8 @@ import { StudentCourseSearchComponent } from './components/student-course-search
 import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 import { StudentMyCoursesComponent } from './components/student-my-courses/student-my-courses.component';
 import { StudentUserComponent } from './components/student-user/student-user.component';
+import { StudentFall2023Component } from './components/student-fall2023/student-fall2023.component';
+import { StudentFall2022Component } from './components/student-fall2022/student-fall2022.component';
 
 const routes: Routes = [
   {
@@ -65,6 +67,14 @@ const routes: Routes = [
   {
     path: 'student',
     component: StudentLanding2Component
+  },
+  {
+    path: 'student/fall2023',
+    component: StudentFall2023Component
+  },
+  {
+    path: 'student/fall2022',
+    component: StudentFall2022Component
   },
   {
     path: 'student/user',

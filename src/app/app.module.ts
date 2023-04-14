@@ -26,6 +26,8 @@ import { StudentMyCoursesComponent } from './components/student-my-courses/stude
 import { StudentCourseSearchComponent } from './components/student-course-search/student-course-search.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
+import { StudentFall2023Component } from './components/student-fall2023/student-fall2023.component';
+import { StudentFall2022Component } from './components/student-fall2022/student-fall2022.component';
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
     AdminCoursesComponent,
     AdminProfessorsComponent,
     ProfileComponent,
-    AdvancedSearchComponent
+    AdvancedSearchComponent,
+    StudentFall2023Component,
+    StudentFall2022Component
   ],
   imports: [
     BrowserModule,
