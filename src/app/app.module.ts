@@ -28,6 +28,12 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 import { StudentFall2023Component } from './components/student-fall2023/student-fall2023.component';
 import { StudentFall2022Component } from './components/student-fall2022/student-fall2022.component';
+import { StudentMyCoursesFall2022Component } from './components/student-my-courses-fall2022/student-my-courses-fall2022.component';
+import { StudentMyCoursesFall2023Component } from './components/student-my-courses-fall2023/student-my-courses-fall2023.component';
+import { ProfessorFall2022Component } from './components/professor-fall2022/professor-fall2022.component';
+import { ProfessorFall2023Component } from './components/professor-fall2023/professor-fall2023.component';
+import { ProfessorMyCoursesFall2022Component } from './components/professor-my-courses-fall2022/professor-my-courses-fall2022.component';
+import { ProfessorMyCoursesFall2023Component } from './components/professor-my-courses-fall2023/professor-my-courses-fall2023.component';
 
 
 @NgModule({
@@ -56,7 +62,13 @@ import { StudentFall2022Component } from './components/student-fall2022/student-
     ProfileComponent,
     AdvancedSearchComponent,
     StudentFall2023Component,
-    StudentFall2022Component
+    StudentFall2022Component,
+    StudentMyCoursesFall2022Component,
+    StudentMyCoursesFall2023Component,
+    ProfessorFall2022Component,
+    ProfessorFall2023Component,
+    ProfessorMyCoursesFall2022Component,
+    ProfessorMyCoursesFall2023Component
   ],
   imports: [
     BrowserModule,
