@@ -20,54 +20,79 @@ export class StudentCourseSearchComponent {
     // id's : department, hours, level, prereqs, days, pathways
     var dropdowns = {};
     const ids = ["department", "hours", "level", "prereqs", "days", "pathways"];
-    this.doc.getElementById("search");
+    //document.getElementById("search");
     // Object.assign(dropdowns,{
     //     "search": (this.doc.getElementById("search")!.innerHTML)
     //   })
     // console.log("test")
-
     
-    const selectDeptElement = document.querySelector<HTMLSelectElement>('#departments');
-    let selectedDeptIndex = selectDeptElement!.selectedIndex;
-    let selectedDeptOptions = selectDeptElement!.selectedOptions;
-    let selectedDeptValue = selectDeptElement!.options[selectedDeptIndex!].value;
+    let selectedDeptValue = "Any";
+    let selectedLevelValue = "Any";
+    let selectedPrereqValue = "Any";
+    let selectedDaysValue = "Any";
+    let selectedHoursValue = "Any";
+    let selectedPathwaysValue = "Any";
 
+    const selectDeptElement = document.querySelector<HTMLSelectElement>('#departments');
+    if (selectDeptElement) {    
+      let selectedDeptIndex = selectDeptElement.selectedIndex;
+      let selectedDeptOptions = selectDeptElement.selectedOptions;
+      selectedDeptValue = selectDeptElement.options[selectedDeptIndex].value;
+    } else {
+      console.log("Department Element Undefined")
+    } 
     
     const selectHoursElement = document.querySelector<HTMLSelectElement>('#hours');
+    if (selectHoursElement) {
     let selectedHoursIndex = selectHoursElement!.selectedIndex;
     let selectedHoursOptions = selectHoursElement!.selectedOptions;
-    let selectedHoursValue = selectHoursElement!.options[selectedHoursIndex!].value;
-
+    selectedHoursValue = selectHoursElement!.options[selectedHoursIndex!].value;
+    } else {
+      console.log("Hours Element Undefined")
+    }
     
     const selectLevelElement = document.querySelector<HTMLSelectElement>('#level');
+    if(selectLevelElement) {
     let selectedLevelIndex = selectLevelElement!.selectedIndex;
     let selectedLevelOptions = selectLevelElement!.selectedOptions;
-    let selectedLevelValue = selectLevelElement!.options[selectedLevelIndex!].value;
-
+    selectedLevelValue = selectLevelElement!.options[selectedLevelIndex!].value;
+    } else {
+      console.log("Level Element Undefined")
+    }
     
     const selectPrereqElement = document.querySelector<HTMLSelectElement>('#prereqs');
+    if(selectPrereqElement) {
     let selectedPrereqIndex = selectPrereqElement!.selectedIndex;
     let selectedPrereqOptions = selectPrereqElement!.selectedOptions;
-    let selectedPrereqValue = selectPrereqElement!.options[selectedPrereqIndex!].value;
-
+    selectedPrereqValue = selectPrereqElement!.options[selectedPrereqIndex!].value;
+    } else {
+      console.log("Hours Element Undefined")
+    }
     
     const selectDaysElement = document.querySelector<HTMLSelectElement>('#days');
+    if(selectDaysElement) {
     let selectedDaysIndex = selectDaysElement!.selectedIndex;
     let selectedDaysOptions = selectDaysElement!.selectedOptions;
-    let selectedDaysValue = selectDaysElement!.options[selectedDaysIndex!].value;
-
+    selectedDaysValue = selectDaysElement!.options[selectedDaysIndex!].value;
+    } else {
+      console.log("Hours Element Undefined")
+    }
     
     const selectPathwaysElement = document.querySelector<HTMLSelectElement>('#pathways');
+    if (selectPathwaysElement) {
     let selectedPathwaysIndex = selectPathwaysElement!.selectedIndex;
     let selectedPathwaysOptions = selectPathwaysElement!.selectedOptions;
-    let selectedPathwaysValue = selectPathwaysElement!.options[selectedPathwaysIndex!].value;
-
+    selectedPathwaysValue = selectPathwaysElement!.options[selectedPathwaysIndex!].value;
+    } else {
+      console.log("Hours Element Undefined")
+    }
+    
     let selectedFilters = [selectedDeptValue, selectedHoursValue, selectedLevelValue, selectedPrereqValue, selectedDaysValue, selectedPathwaysValue]
-
     
     this.databaseService.searchCourses(selectedFilters)
       .pipe(take(1)).subscribe(res => {
         res.response
+        console.log(res.response.courseName)
       })
 
     // ids.forEach(id => {

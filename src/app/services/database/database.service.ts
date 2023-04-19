@@ -12,7 +12,7 @@ export class DatabaseService {
     private http: HttpClient
   ) { }
 
-  searchCourses(tags: [String]): Observable<any> {
+  searchCourses(tags: string[]): Observable<any> {
     return this.http.post<any>(`${environment.serverUrl}/api/searchcourses`, {
       courseTags: tags
     })
