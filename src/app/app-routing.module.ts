@@ -16,6 +16,14 @@ import { StudentCourseSearchComponent } from './components/student-course-search
 import { StudentLanding2Component } from './components/student-landing2/student-landing2.component';
 import { StudentMyCoursesComponent } from './components/student-my-courses/student-my-courses.component';
 import { StudentUserComponent } from './components/student-user/student-user.component';
+import { StudentFall2023Component } from './components/student-fall2023/student-fall2023.component';
+import { StudentFall2022Component } from './components/student-fall2022/student-fall2022.component';
+import { StudentMyCoursesFall2022Component } from './components/student-my-courses-fall2022/student-my-courses-fall2022.component';
+import { StudentMyCoursesFall2023Component } from './components/student-my-courses-fall2023/student-my-courses-fall2023.component';
+import { ProfessorFall2022Component } from './components/professor-fall2022/professor-fall2022.component';
+import { ProfessorFall2023Component } from './components/professor-fall2023/professor-fall2023.component';
+import { ProfessorMyCoursesFall2022Component } from './components/professor-my-courses-fall2022/professor-my-courses-fall2022.component';
+import { ProfessorMyCoursesFall2023Component } from './components/professor-my-courses-fall2023/professor-my-courses-fall2023.component';
 
 const routes: Routes = [
   {
@@ -27,12 +35,28 @@ const routes: Routes = [
     component: ProfessorLandingComponent
   },
   {
+    path: 'professor/fall2022',
+    component: ProfessorFall2022Component
+  },
+  {
+    path: 'professor/fall2023',
+    component: ProfessorFall2023Component
+  },
+  {
     path: 'professor/user',
     component: ProfessorUserComponent
   },
   {
     path: 'professor/courses',
     component: ProfessorMyCoursesComponent
+  },
+  {
+    path: 'professor/courses/fall2022',
+    component: ProfessorMyCoursesFall2022Component
+  },
+  {
+    path: 'professor/courses/fall2023',
+    component: ProfessorMyCoursesFall2023Component
   },
   {
     path: 'professor/edit',
@@ -67,6 +91,14 @@ const routes: Routes = [
     component: StudentLanding2Component
   },
   {
+    path: 'student/fall2023',
+    component: StudentFall2023Component
+  },
+  {
+    path: 'student/fall2022',
+    component: StudentFall2022Component
+  },
+  {
     path: 'student/user',
     component: StudentUserComponent
   },
@@ -77,6 +109,14 @@ const routes: Routes = [
   {
     path: 'student/student-courses',
     component: StudentMyCoursesComponent
+  },
+  {
+    path: 'student/student-courses/fall2022',
+    component: StudentMyCoursesFall2022Component
+  },
+  {
+    path: 'student/student-courses/fall2023',
+    component: StudentMyCoursesFall2023Component
   },
   {
     path: '**',
