@@ -9,17 +9,16 @@ import { DatabaseService  } from 'src/app/services/database/database.service';
   styleUrls: ['./student-course-search.component.css']
 })
 export class StudentCourseSearchComponent {
-  public courses;
+  public courses: any[] = [];
   @Inject(DOCUMENT) doc: Document
-  constructor(private databaseService: DatabaseService) { 
-    this.courses = ["Course1", "Course2", "Course3", "Course4", "Course5", "Course6", "Course7", "Course8", "Course9", "Course10"]
+  constructor(private databaseService: DatabaseService) {
     
   }
 
   search() { 
     // id's : department, hours, level, prereqs, days, pathways
     var dropdowns = {};
-    const ids = ["department", "hours", "level", "prereqs", "days", "pathways"];
+    //const ids = ["department", "hours", "level", "prereqs", "days", "pathways"];
     //document.getElementById("search");
     // Object.assign(dropdowns,{
     //     "search": (this.doc.getElementById("search")!.innerHTML)
@@ -33,7 +32,7 @@ export class StudentCourseSearchComponent {
     let selectedHoursValue = "Any";
     let selectedPathwaysValue = "Any";
 
-    const selectDeptElement = document.querySelector<HTMLSelectElement>('#departments');
+    const selectDeptElement = document.querySelector<HTMLSelectElement>('#department');
     if (selectDeptElement) {    
       let selectedDeptIndex = selectDeptElement.selectedIndex;
       let selectedDeptOptions = selectDeptElement.selectedOptions;
@@ -89,11 +88,14 @@ export class StudentCourseSearchComponent {
     
     let selectedFilters = [selectedDeptValue, selectedHoursValue, selectedLevelValue, selectedPrereqValue, selectedDaysValue, selectedPathwaysValue]
     
+    
     this.databaseService.searchCourses(selectedFilters)
       .pipe(take(1)).subscribe(res => {
-        res.response
-        console.log(res.response.courseName)
+        console.log(res.courses)
+        this.courses = res.courses
       })
+      
+     console.log(selectedFilters)
 
     // ids.forEach(id => {
     //   console.log(id);
