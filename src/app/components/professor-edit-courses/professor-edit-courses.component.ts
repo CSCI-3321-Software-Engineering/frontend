@@ -31,6 +31,8 @@ export class ProfessorEditCoursesComponent {
     let selectedDaysValue = "Any";
     let selectedHoursValue = "Any";
     let selectedPathwaysValue = "Any";
+    let selectedSearchValue = "";
+
 
     const selectDeptElement = document.querySelector<HTMLSelectElement>('#department');
     if (selectDeptElement) {    
@@ -85,8 +87,15 @@ export class ProfessorEditCoursesComponent {
     } else {
       console.log("Hours Element Undefined")
     }
+
+    const inputElement = document.querySelector<HTMLInputElement>('#search');
+    if (inputElement) {
+      selectedSearchValue = inputElement.value;
+    } else {
+      console.log("Search Element Undefined")
+    }
     
-    let selectedFilters = [selectedDeptValue, selectedHoursValue, selectedLevelValue, selectedPrereqValue, selectedDaysValue, selectedPathwaysValue]
+    let selectedFilters = [selectedDeptValue, selectedHoursValue, selectedLevelValue, selectedPrereqValue, selectedDaysValue, selectedPathwaysValue, selectedSearchValue]
     
     
     this.databaseService.searchCourses(selectedFilters)
