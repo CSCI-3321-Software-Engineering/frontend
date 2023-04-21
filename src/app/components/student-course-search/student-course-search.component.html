@@ -166,6 +166,7 @@
   <div id="rectangle">
     <h1 style= "font-size: 33px;" > SEARCH RESULTS</h1>
     <ul id="loglist">
+      <div *ngIf="courses.length === 0">No courses found.</div>
       <li *ngFor="let course of courses">
         {{course.title}}
       </li>
