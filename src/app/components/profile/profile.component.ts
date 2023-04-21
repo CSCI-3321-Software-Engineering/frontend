@@ -16,11 +16,11 @@ export class ProfileComponent {
   constructor(
     private databaseConn: DatabaseService,
     private cookieService: CookieService
-  ) { 
+  ) {
     const obj = this.getUserInfo();
   }
 
-  getUserInfo() { 
+  getUserInfo() {
 
     // API endpoint not functioning yet
     this.databaseConn.getUserInfo(this.cookieService.get('username')).pipe(take(1)).subscribe({
@@ -32,5 +32,5 @@ export class ProfileComponent {
         this.id = data.id;
       }
     })
-  } 
+  }
 }

@@ -14,12 +14,13 @@ export class LoginComponent {
 
   constructor(
     private loginService: LoginService,
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private router: Router,
     private cookieService: CookieService,
   ) { }
 
   checkLogin(data: any) {
+    this.cookieService.deleteAll();
     const username = data.username;
     const password = data.password;
 
@@ -36,7 +37,7 @@ export class LoginComponent {
             console.log(this.cookieService.get('username'));
             console.log(this.cookieService.get('password'));
 
-            
+
             // eventually need to port over to student landing here
             switch (data.userType) {
               case "s": {
@@ -53,14 +54,14 @@ export class LoginComponent {
               }
             }
 
-            
+
           } else {
             // need to display error message here
             console.log("incorrect username and password");
           }
         },
-      error: (error) => { console.log(error) }
-    })
+        error: (error) => { console.log(error) }
+      })
   }
 
 

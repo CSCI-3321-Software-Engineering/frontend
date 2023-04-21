@@ -12,6 +12,12 @@ export class DatabaseService {
     private http: HttpClient
   ) { }
 
+  courseRegistration(tags: string[]): Observable<any> {
+    return this.http.post<any>(`${environment.serverUrl}/api/registration`, {
+      courseTags: tags
+    })
+  }
+
   getCourses(username: String, registering: Boolean): Observable<any> {
     return this.http.post<any>(`${environment.serverUrl}/api/getcourses`, {
       user: username,
@@ -31,4 +37,6 @@ export class DatabaseService {
       user: username
     });
   }
+
+
 }

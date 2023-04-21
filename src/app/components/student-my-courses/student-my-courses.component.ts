@@ -20,26 +20,26 @@ export class StudentMyCoursesComponent {
     private cookieService: CookieService,
     private databaseConn: DatabaseService,
     @Inject(DOCUMENT) doc: Document
-  ) { 
+  ) {
 
     this.username = this.cookieService.get('username');
-    
+
     databaseConn.getCourses(this.username, true)
       .pipe(take(1)).subscribe(res => {
         const myRegistrationCourses = res.courses.split(" ");
 
         myRegistrationCourses.forEach((courseName: String) => {
           databaseConn.getCourse(courseName).pipe(take(1))
-          .subscribe(res => {
-            this.courseObjs.push(res);
-          })
+            .subscribe(res => {
+              this.courseObjs.push(res);
+            })
         });
       });
 
     databaseConn.getCourses(this.username, false)
       .pipe(take(1)).subscribe(res => {
         this.myCourses = res.courses.split(" ");
-    });
+      });
 
   }
 
