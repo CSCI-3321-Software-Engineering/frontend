@@ -167,8 +167,9 @@
     <h1 style= "font-size: 33px;" > SEARCH RESULTS</h1>
     <ul id="loglist">
       <div *ngIf="courses.length === 0">No courses found.</div>
-      <li *ngFor="let course of courses">
+      <li *ngFor="let course of courses" class="list-item">
         {{course.title}}
+        <input type="checkbox" style="float: right; width: 20px; height: 20px;" (change)="onCourseChecked($event, course.title)" />
       </li>
     </ul>
   </div>

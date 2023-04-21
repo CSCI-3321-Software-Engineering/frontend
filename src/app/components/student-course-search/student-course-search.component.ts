@@ -114,4 +114,19 @@ export class StudentCourseSearchComponent {
 
    
   }
+
+  checkedCourses: any[] = [];
+
+  onCourseChecked(event: any, course: string) {
+    console.log(course)
+    if (event.target.checked) {
+      this.checkedCourses.push(course);
+    } else {
+      const index = this.checkedCourses.indexOf(course);
+      if (index !== -1) {
+        this.checkedCourses.splice(index, 1); // remove course from checkedCourses array if unchecked
+      }
+    }
+    console.log(this.checkedCourses);
+  }
 }
