@@ -12,6 +12,12 @@ export class DatabaseService {
     private http: HttpClient
   ) { }
 
+  searchCourses(tags: String[]): Observable<any> {
+    return this.http.post<any>(`${environment.serverUrl}/api/searchcourses`, {
+      courseTags: tags
+    })
+  }
+
   getCourses(username: String, registering: Boolean): Observable<any> {
     return this.http.post<any>(`${environment.serverUrl}/api/getcourses`, {
       user: username,

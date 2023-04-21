@@ -40,12 +40,12 @@
                 <div class="input-select">
                   <select id="department" data-trigger="" name="choices-single-defaul">
                     <option placeholder="" value="">Department</option>
-                    <option>Art/Art History</option>
+                    <option>ART</option>
                     <option>Biology</option>
                     <option>Chemistry</option>
                     <option>Classical Studies</option>
                     <option>Communication</option>
-                    <option>Computer Science</option>
+                    <option>CSCI</option>
                     <option>Economics</option>
                     <option>Education</option>
                     <option>Engineering Science</option>
@@ -54,7 +54,7 @@
                     <option>Health Care Administration</option>
                     <option>History</option>
                     <option>Human Communication/Theatre</option>
-                    <option>Mathematics</option>
+                    <option>MATH</option>
                     <option>Music</option>
                     <option>Philosophy</option>
                     <option>Physics/Astronomy</option>
@@ -94,10 +94,10 @@
                 <div class="input-select">
                   <select id="level" data-trigger="" name="choices-single-defaul">
                     <option placeholder="" value="">Level</option>
-                    <option>1XXX</option>
-                    <option>2XXX</option>
-                    <option>3XXX</option>
-                    <option>4XXX</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
                   </select>
                 </div>
               </div>
@@ -105,14 +105,14 @@
                 <div class="input-select">
                   <select id="days" data-trigger="" name="choices-single-defaul">
                     <option placeholder="" value="">Day(s)</option>
-                    <option>Monday</option>
-                    <option>Tuesday</option>
-                    <option>Wednesday</option>
-                    <option>Thursday</option>
-                    <option>Friday</option>
-                    <option>Mon/Wed</option>
-                    <option>Mon/Wed/Fri</option>
-                    <option>Tues/Thurs</option>
+                    <option>M</option>
+                    <option>Tu</option>
+                    <option>W</option>
+                    <option>Th</option>
+                    <option>F</option>
+                    <option>M W</option>
+                    <option>M W F</option>
+                    <option>Tu Th</option>
                   </select>
                 </div>
               </div>
@@ -166,8 +166,9 @@
   <div id="rectangle">
     <h1 style= "font-size: 33px;" > SEARCH RESULTS</h1>
     <ul id="loglist">
+      <div *ngIf="courses.length === 0">No courses found.</div>
       <li *ngFor="let course of courses">
-        {{course}}
+        {{course.title}}
       </li>
     </ul>
   </div>
