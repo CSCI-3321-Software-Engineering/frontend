@@ -20,6 +20,7 @@ export class LoginComponent {
   ) { }
 
   checkLogin(data: any) {
+    this.cookieService.deleteAll();
     const username = data.username;
     const password = data.password;
 
