@@ -12,15 +12,17 @@ export class DatabaseService {
     private http: HttpClient
   ) { }
 
-  getCourses(username: String, registering: Boolean): Observable<any> {
+  getCourses(term: string, username: String, registering: Boolean): Observable<any> {
     return this.http.post<any>(`${environment.serverUrl}/api/getcourses`, {
+      term: term.replace(/ /g, ''),
       user: username,
       registration: registering
     })
   }
 
-  getCourse(name: String): Observable<any> {
+  getCourse(term: string, name: String): Observable<any> {
     return this.http.post<any>(`${environment.serverUrl}/api/getcourse`, {
+      term: term.replace(/ /g, ''),
       courseName: name
     });
   }

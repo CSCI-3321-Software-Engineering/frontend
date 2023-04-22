@@ -16,7 +16,7 @@
             style="color: black; font-size: 32px;font-weight: 600; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
             SCHEDULE: {{semesters[0]}}
             <div class="dropdown">
-                <button class="dropbtn">Term</button>
+                <button class="dropbtn">Term ▼</button>
                 <div class="dropdown-content">
                     <button *ngFor="let sem of semesters" (click)="switchSemester(sem)">{{sem}}</button>
                 </div>
@@ -40,13 +40,11 @@
                     <tr *ngFor="let time of times">
                         <td class="align-middle font-weight-bold">{{time}}</td>
                         <td *ngFor="let day of days" [ngSwitch]="timedict[time][day] != null">
-                            <span *ngSwitchCase="true" class="classname bg-{{timedict[time][day].color}}">
-                                {{timedict[time][day].name}}
+                            <span *ngSwitchCase="true" class="classname bg-sky">
+                                {{timedict[time][day].title}}
                             </span>
-                            <div *ngSwitchCase="true" class="margin-10px-top font-size14">
-                                {{timedict[time][day].time}}</div>
-                            <div *ngSwitchCase="true" class="font-size13">{{timedict[time][day].prof}}</div>
-                            <div *ngSwitchCase="true" class="font-size12">{{timedict[time][day].code}}</div>
+                            <div *ngSwitchCase="true" class="font-size14">{{timedict[time][day].professor}}</div>
+                            <div *ngSwitchCase="true" class="font-size13">{{timedict[time][day].courseNumber}}</div>
                         </td>
                     </tr>
                 </tbody>
