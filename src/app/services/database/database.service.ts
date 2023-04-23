@@ -12,6 +12,14 @@ export class DatabaseService {
     private http: HttpClient
   ) { }
 
+  addCourseToCart(course_name: String, username: String) {
+    console.log("callling service")
+    return this.http.post<any>(`${environment.serverUrl}/api/addtocart`, {
+      course_name: course_name,
+      username: username
+    })
+  }
+
   searchCourses(tags: String[]): Observable<any> {
     return this.http.post<any>(`${environment.serverUrl}/api/searchcourses`, {
       courseTags: tags
