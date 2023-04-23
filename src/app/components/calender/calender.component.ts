@@ -27,6 +27,7 @@ export class CalenderComponent {
       this.data.getCourse(term, n).pipe(take(1)).subscribe({
         next: (course) => {
           this.classes.push(course)
+          this.setTimeDict()
         }
       })
     }
@@ -43,7 +44,6 @@ export class CalenderComponent {
   switchSemester(sem: string) {
     document.getElementById("semestertitle")!.firstChild!.nodeValue = "SCHEDULE: " + sem + " "
     this.getClasses(sem)
-    this.setTimeDict()
   }
 
   daysdict(timeprefix: string) {
