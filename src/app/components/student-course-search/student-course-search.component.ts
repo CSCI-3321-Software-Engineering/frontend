@@ -99,14 +99,14 @@ export class StudentCourseSearchComponent {
 
     let selectedFilters = [selectedDeptValue, selectedHoursValue, selectedLevelValue, selectedPrereqValue, selectedDaysValue, selectedPathwaysValue, selectedSearchValue]
 
-
+    console.log(selectedFilters);
     this.databaseService.searchCourses(selectedFilters)
       .pipe(take(1)).subscribe(res => {
         console.log(res.courses)
         this.courses = res.courses
       })
 
-    console.log(selectedFilters)
+    // console.log(selectedFilters)
 
     // ids.forEach(id => {
     //   console.log(id);
@@ -122,6 +122,7 @@ export class StudentCourseSearchComponent {
 
   onCourseChecked(event: any, course: string) {
     if (event.target.checked) {
+      console.log(course);
       this.checkedCourses.push(course);
       this.databaseService.addCourseToCart(course, this.cookieService.get('username'))
         .pipe(take(1)).subscribe(res => { console.log("called addtocart") })
@@ -131,6 +132,5 @@ export class StudentCourseSearchComponent {
         this.checkedCourses.splice(index, 1); // remove course from checkedCourses array if unchecked
       }
     }
-    console.log(this.checkedCourses);
   }
 }

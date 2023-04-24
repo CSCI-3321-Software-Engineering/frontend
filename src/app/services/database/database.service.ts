@@ -13,7 +13,7 @@ export class DatabaseService {
   ) { }
 
   addCourseToCart(course_name: String, username: String) {
-    console.log("callling service")
+    console.log("calling service")
     return this.http.post<any>(`${environment.serverUrl}/api/addtocart`, {
       course_name: course_name,
       username: username
