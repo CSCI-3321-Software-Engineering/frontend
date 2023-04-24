@@ -33,8 +33,23 @@ export class DatabaseService {
     })
   }
 
+  getSemesterCourses(term: string, username: String, registering: Boolean): Observable<any> {
+    return this.http.post<any>(`${environment.serverUrl}/api/getsemestercourses`, {
+      term: term.replace(/ /g, ''),
+      user: username,
+      registration: registering
+    })
+  }
+
   getCourse(name: String): Observable<any> {
     return this.http.post<any>(`${environment.serverUrl}/api/getcourse`, {
+      courseName: name
+    });
+  }
+
+  getSemesterCourse(term: string, name: String): Observable<any> {
+    return this.http.post<any>(`${environment.serverUrl}/api/getsemestercourse`, {
+      term: term.replace(/ /g, ''),
       courseName: name
     });
   }
