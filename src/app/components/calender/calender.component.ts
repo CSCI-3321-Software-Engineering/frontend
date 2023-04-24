@@ -17,14 +17,14 @@ export class CalenderComponent {
   classes: any[] = []
 
   constructor(private data: DatabaseService, private cookies: CookieService) {
-    this.getClasses(this.semesters[0])
+    this.getCurrentClasses()
   }
   ngOnInit() { }
 
   getCourse(term: string) {
     this.classes = []
     for (let n of this.names) {
-      this.data.getCourse(term, n).pipe(take(1)).subscribe({
+      this.data.getSemesterCourse(term, n).pipe(take(1)).subscribe({
         next: (course) => {
           this.classes.push(course)
           this.setTimeDict()
@@ -33,7 +33,7 @@ export class CalenderComponent {
     }
   }
   getClasses(term: string) {
-    this.data.getCourses(term, this.cookies.get("username"), false).pipe(take(1)).subscribe({
+    this.data.getSemesterCourses(term, this.cookies.get("username"), false).pipe(take(1)).subscribe({
       next: (data) => {
         this.names = data.courses.split(" ")
         this.getCourse(term)
@@ -41,9 +41,30 @@ export class CalenderComponent {
     })
   }
 
+  getCurrentCourse() {
+    this.classes = []
+    for (let n of this.names) {
+      this.data.getCourse(n).pipe(take(1)).subscribe({
+        next: (course) => {
+          this.classes.push(course)
+          this.setTimeDict()
+        }
+      })
+    }
+  }
+  getCurrentClasses() {
+    this.data.getCourses(this.cookies.get("username"), false).pipe(take(1)).subscribe({
+      next: (data) => {
+        this.names = data.courses.split(" ")
+        this.getCurrentCourse()
+      }
+    })
+  }
+
   switchSemester(sem: string) {
     document.getElementById("semestertitle")!.firstChild!.nodeValue = "SCHEDULE: " + sem + " "
-    this.getClasses(sem)
+    if (sem == this.semesters[0]) this.getCurrentClasses()
+    else this.getClasses(sem)
   }
 
   daysdict(timeprefix: string) {

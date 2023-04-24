@@ -24,19 +24,19 @@ export class StudentMyCoursesComponent {
 
     this.username = this.cookieService.get('username');
 
-    databaseConn.getCourses("Spring 2023", this.username, true)
+    databaseConn.getCourses(this.username, true)
       .pipe(take(1)).subscribe(res => {
         const myRegistrationCourses = res.courses.split(" ");
 
         myRegistrationCourses.forEach((courseName: String) => {
-          databaseConn.getCourse("Spring 2023", courseName).pipe(take(1))
+          databaseConn.getCourse(courseName).pipe(take(1))
             .subscribe(res => {
               this.courseObjs.push(res);
             })
         });
       });
 
-    databaseConn.getCourses("Spring 2023", this.username, false)
+    databaseConn.getCourses(this.username, false)
       .pipe(take(1)).subscribe(res => {
         this.myCourses = res.courses.split(" ");
       });
