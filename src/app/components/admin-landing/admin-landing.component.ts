@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { firstValueFrom, take } from 'rxjs';
+import { DatabaseService } from 'src/app/services/database/database.service';
 
 @Component({
   selector: 'app-admin-landing',
@@ -6,8 +9,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-landing.component.css']
 })
 export class AdminLandingComponent {
+  constructor(
+    private databaseService: DatabaseService,
+  ) {
 
-  getLogs(): String[] { return ["[19:39] [28,01] kpartal1 registered for CSCI-3397", "Log2", "Log3", "Log4", "Log5", "Log6", "Log7", "Log8", "Log9", "Log10", "Log11", "Log12", "Log13", "Log14", "Log15"] }
-  logs = this.getLogs();
+  }
+
+  async getLogs(): Promise<String[]> {
+    const res = await firstValueFrom(this.databaseService.getLogs());
+    console.log(res);
+    return res.response;
+  }
+
+  logs: any[] = [];
+
+  async ngOnInit() {
+    this.logs = await this.getLogs();
+  }
 
 }

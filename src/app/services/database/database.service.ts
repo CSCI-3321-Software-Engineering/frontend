@@ -12,6 +12,10 @@ export class DatabaseService {
     private http: HttpClient
   ) { }
 
+  getLogs() {
+    return this.http.get<any>(`${environment.serverUrl}/api/logs`);
+  }
+
   addCourseToCart(course_name: String, username: String) {
     console.log("calling service")
     return this.http.post<any>(`${environment.serverUrl}/api/addtocart`, {
