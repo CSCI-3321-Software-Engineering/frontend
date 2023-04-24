@@ -12,7 +12,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class StudentMyCoursesComponent {
   public courseObjs: any[] = [];
-  public myCourses: any;
+  public myCourses: any[] = [];
   public username;
 
   constructor(
@@ -27,19 +27,31 @@ export class StudentMyCoursesComponent {
     databaseConn.getCourses(this.username, true)
       .pipe(take(1)).subscribe(res => {
         const myRegistrationCourses = res.courses.split(" ");
-
+        console.log(myRegistrationCourses)
         myRegistrationCourses.forEach((courseName: String) => {
-          databaseConn.getCourse(courseName).pipe(take(1))
-            .subscribe(res => {
-              this.courseObjs.push(res);
-            })
+          if (courseName) {
+            databaseConn.getCourse(courseName).pipe(take(1))
+              .subscribe(res => {
+                this.courseObjs.push(res);
+              })
+          }
         });
       });
 
     databaseConn.getCourses(this.username, false)
       .pipe(take(1)).subscribe(res => {
-        this.myCourses = res.courses.split(" ");
+        const course_names = res.courses.split(" ");
+        course_names.forEach((courseName: String) => {
+          console.log(courseName)
+          databaseConn.getCourse(courseName).pipe(take(1))
+            .subscribe(res => {
+              this.myCourses.push(res);
+            })
+        })
       });
+
+    console.log(this.courseObjs);
+    console.log(this.myCourses);
 
   }
 

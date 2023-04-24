@@ -1476,3 +1476,20 @@ legend {
   text-decoration: none;
   background-color: lightgray;
 }
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+}
+.checkbox {
+  margin-left: 1rem;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+  margin: 0 auto;
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-right:10px;
+}
