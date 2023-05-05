@@ -53,6 +53,12 @@ export class StudentMyCoursesComponent {
     console.log(this.courseObjs);
     console.log(this.myCourses);
 
+    /* FUNCTION FOR DROPPING COURSES (POTENTIALLY WRONG LOCATION) */
+    /*
+    onDeleteCourse(id: string) {
+      this.http.delete( LINK TO THE REGISTERED COURSES IN DATABASE )
+    }
+    */
   }
 
 }
