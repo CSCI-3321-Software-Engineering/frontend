@@ -61,6 +61,7 @@
                     <tbody>
                 </table>
             </div>
+            
             <br>
             <button id="right" class="button">REMOVE SELECTED FROM FAVORITES</button>
             <br>
@@ -68,6 +69,38 @@
             <button id="right" class="button">REGISTER FOR SELECTED</button>
             <br>
             <br>
+        
+        <!-- DROP COURSE START -->
+        <h1 class="text-font" style="color: black; font-size: 30px;font-weight: 600; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            Drop Course
+        </h1>
+        <br>
+        <br>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Registered Courses</th>
+                        <th>Time</th>
+                        <th>Delete Course</th>
+                    </tr>
+                </thead>
+                <tbody #registeringTable>
+                    <tr #tableBodyRow *ngFor="let course of myCourses">
+                        <td>{{course.title}}</td>
+                        <td>{{course.courseNumber}}</td>
+                        <!-- DELETE BUTTON -->
+                        <td><button class ="btn-delete">Delete</button></td>
+                        <!-- 
+                            onDeleteCourse() function will be written in the file "student-my-courses.component.ts".
+                            The function is supposed to delete the specific course based on its  Course ID Number or
+                            whatever unique identifier in the database. Not sure if the file is the correct location to be honest. 
+                        -->
+                    </tr>
+                <tbody>
+            </table>
+        </div>
+        <!-- DROP COURSE END -->
         </div>
         <br>
         <br>
